@@ -1,0 +1,37 @@
+<%= form_with model: @physician do |form| %>
+<div>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+    <% @physician.errors.full_messages_for(:first_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+    <div>
+    <%= form.label :last_name %><br>
+    <%= form.text_field :last_name %>
+    <% @physician.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+  <div>
+    <%= form.label :tel_no%><br>
+    <%= form.text_field :tel_no %>
+    <% @physician.errors.full_messages_for(:tel_no).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <div>
+    <%= form.label :email%><br>
+    <%= form.text_field :email %>
+    <% @physician.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <div>
+    <%= form.label :gender%><br>
+    <%= form.text_field :gender %>
+    <% @physician.errors.full_messages_for(:gender).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+<div>
+ <%= form.submit %>
+  </div>
+<% end %>

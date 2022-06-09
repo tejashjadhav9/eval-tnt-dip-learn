@@ -1,0 +1,56 @@
+<%= form_with model: @patient do |form| %>
+<div>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+    <% @patient.errors.full_messages_for(:first_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+    <div>
+    <%= form.label :last_name %><br>
+    <%= form.text_field :last_name %>
+    <% @patient.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+  <div>
+    <%= form.label :phone_no%><br>
+    <%= form.text_field :phone_no %>
+    <% @patient.errors.full_messages_for(:phone_no).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <div>
+    <%= form.label :email%><br>
+    <%= form.text_field :email %>
+    <% @patient.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <div>
+    <%= form.label :city%><br>
+    <%= form.text_field :city %>
+    <% @patient.errors.full_messages_for(:city).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <div>
+    <%= form.label :address%><br>
+    <%= form.text_field :address %>
+    <% @patient.errors.full_messages_for(:address).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <div>
+    <%= form.label :age%><br>
+    <%= form.text_field :age %>
+    <% @patient.errors.full_messages_for(:age).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+    <div>
+    <%= form.label :gender%><br>
+    <%= form.text_field :gender %>
+    <% @patient.errors.full_messages_for(:gender).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+<div>
+ <%= form.submit %>
+  </div>
+<% end %>

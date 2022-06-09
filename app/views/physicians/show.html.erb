@@ -1,0 +1,13 @@
+<h1>f name - <%= @physician.first_name %></h1>
+
+<p>l Name - <%= @physician.last_name %></p>
+
+<p>email - <%= @physician.email %></p>
+
+<p>phone - <%= @physician.tel_no %></p>
+
+<p>gender - <%= @physician.gender %></p>
+
+<%= link_to "edit", edit_physician_path %>
+<%= link_to "Destroy" ,physician_path, data:{turbo_method: :delete ,turbo_confirm: "Are you sure?"} %>
+<%= link_to "Homepage" ,root_path %>

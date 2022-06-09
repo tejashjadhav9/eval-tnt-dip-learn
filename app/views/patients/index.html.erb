@@ -1,0 +1,9 @@
+<%@patients.each do |u|%>
+<a href="/patients/<%=u.id%>">
+<li>
+<%=u.first_name%>
+<%end%>
+</li>
+</ul>
+
+<%= link_to "New", new_patient_path(@patient) %>
